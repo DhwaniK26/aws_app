@@ -4,7 +4,7 @@ const { Pool } = require("pg");
 const cors = require("cors");
 
 const app = express();
-const PORT = 4000
+const PORT = 4001
 
 // Parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -40,7 +40,7 @@ app.post("/user", async (req, res) => {
 
 app.get("/users", async (req, res) => {
   try {
-    const result = await pool.query("SELECT * FROM user");
+    const result = await pool.query("SELECT * FROM myuserdata");
     res.status(200).json({
         mesg:"iiii"
     });

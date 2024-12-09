@@ -10,7 +10,7 @@ function App() {
 
   // Fetch users when the component mounts
   useEffect(() => {
-    fetch("http://localhost:4000/users")
+    fetch("http://localhost:4001/users")
       .then((response) => response.json())
       .then((data) => {
         setUsers(data);
@@ -33,7 +33,7 @@ function App() {
     };
 
     // Send POST request to the backend
-    fetch("http://localhost:4000/user", {
+    fetch("http://localhost:4001/user", {
       method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
