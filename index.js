@@ -10,12 +10,19 @@ const PORT = 4000
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
+// const pool = new Pool({
+//   user: "postgres",
+//   host: "localhost",
+//   database: "awsdb",
+//   password: "postgre",
+//   port: 5432,
+// });
+
 const pool = new Pool({
-  user: "postgres",
-  host: "localhost",
-  database: "awsdb",
-  password: "postgre",
-  port: 5432,
+  connectionString: "postgresql://awsdb_owner:w4Qxu0mBRNKH@ep-super-pond-a5zwae4b.us-east-2.aws.neon.tech/awsdb?sslmode=require",
+  ssl: {
+    rejectUnauthorized: false, // Needed for some hosted services
+  },
 });
 
 app.post("/user", async (req, res) => {

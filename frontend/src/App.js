@@ -102,13 +102,13 @@ function App() {
       </form>
 
       <h2>Users List</h2>
-      <ul>
+      {/* <ul>
         {users && users.map((user, index) => (
           <li key={index}>
             {user.first_name} {user.last_name} - {user.email}
           </li>
         ))}
-      </ul>
+      </ul> */}
     </div>
   );
 }
