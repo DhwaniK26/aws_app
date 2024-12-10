@@ -21,7 +21,7 @@ app.use(cors());
 const pool = new Pool({
   connectionString: "postgresql://awsdb_owner:w4Qxu0mBRNKH@ep-super-pond-a5zwae4b.us-east-2.aws.neon.tech/awsdb?sslmode=require",
   ssl: {
-    rejectUnauthorized: false, // Needed for some hosted services
+    rejectUnauthorized: true, // Needed for some hosted services
   },
 });
 
